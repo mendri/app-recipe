@@ -1,7 +1,10 @@
+import "dotenv/config";
 import app from "./app";
 import connectToDatabase from "./Models/connection";
 
-connectToDatabase().then(
+const URI = `mongodb://${process.env.MONGO_DB_USER}:${process.env.MONGO_DB_PASS}@mongodb:27017/`;
+
+connectToDatabase(URI).then(
 	() => {
 		app.listen(3001, () => {
 			console.log("Runing at port 3001");
