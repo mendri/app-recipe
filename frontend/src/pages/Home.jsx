@@ -2,7 +2,7 @@ import React from "react";
 
 function Home() {
 	return(
-		<p>Olá Mundo</p>
+		<p>Parabéns você esta logado</p>
 	);
 }
 
